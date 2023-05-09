@@ -1,4 +1,4 @@
-package DnDGuide;
+package DnD;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

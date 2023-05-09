@@ -4,6 +4,6 @@ module com.example.dndguide {
     requires java.sql;
 
 
-    opens DnDGuide to javafx.fxml;
-    exports DnDGuide;
+    opens DnD to javafx.fxml;
+    exports DnD;
 }

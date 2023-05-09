@@ -1,12 +1,11 @@
-package DnDGuide;
+package DnD;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class ConnectionDB {
     public Connection getConnectionDB(){
-        final String databaseURL = "jdbc:mysql://localhost:3306/dndEnemies";
+        final String databaseURL = "jdbc:mysql://localhost:3306/dnd";
         final String databaseUser = "Elexlex";
         final String databasePassword = "Phoenix$$2004";
         Connection connection = null;

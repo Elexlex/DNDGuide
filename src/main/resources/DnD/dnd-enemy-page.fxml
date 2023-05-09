@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DnD.EnemyPageController">
+   <content>
+      <AnchorPane fx:id="anchorPaneMain" prefHeight="900.0" prefWidth="700.0">
+         <children>
+            <AnchorPane fx:id="anchorPaneSecondary" layoutX="14.0" layoutY="14.0" prefHeight="479.0" prefWidth="310.0">
+               <children>
+                  <Label fx:id="enemyName" alignment="TOP_LEFT" layoutX="2.0" layoutY="3.0" prefHeight="90.0" prefWidth="311.0" styleClass="enemyName" text="Example name of the monster" wrapText="true">
+                     <font>
+                        <Font name="Lucida Sans Typewriter Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="enemyDescription" alignment="TOP_LEFT" layoutX="1.0" layoutY="79.0" prefHeight="400.0" prefWidth="311.0" text="Example description" wrapText="true">
+                     <font>
+                        <Font name="Lucida Sans Typewriter Regular" size="16.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="label" />
+                        <String fx:value="label" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <GridPane layoutX="204.0" layoutY="175.0">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="27.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Pane layoutX="336.0" layoutY="14.0" prefHeight="600.0" prefWidth="350.0">
+               <children>
+                  <ImageView fx:id="enemyPicture" fitHeight="275.0" fitWidth="300.0" layoutX="29.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Pane fx:id="statsPane" layoutX="20.0" layoutY="295.0" prefHeight="300.0" prefWidth="310.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="40.0" prefHeight="30.0" prefWidth="50.0" text="HP">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="40.0" prefHeight="30.0" prefWidth="50.0" text="AC">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyHP" alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="70.0" prefHeight="30.0" prefWidth="50.0" text="HP_Example">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyAC" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="70.0" prefHeight="30.0" prefWidth="50.0" text="AC_Example">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Line endX="200.0" layoutX="105.0" layoutY="130.0" startX="-100.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="135.0" prefHeight="30.0" prefWidth="50.0" text="STR">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="135.0" prefHeight="30.0" prefWidth="50.0" text="DEX">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="135.0" prefHeight="30.0" prefWidth="50.0" text="CON">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="135.0" prefHeight="30.0" prefWidth="50.0" text="INT">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="204.0" layoutY="135.0" prefHeight="30.0" prefWidth="50.0" text="WIS">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="254.0" layoutY="135.0" prefHeight="30.0" prefWidth="50.0" text="CHA">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyStrength" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="180.0" prefHeight="30.0" prefWidth="50.0" text="STR_Number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyDexterity" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="180.0" prefHeight="30.0" prefWidth="50.0" text="DEX_Number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyConstitution" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="180.0" prefHeight="30.0" prefWidth="50.0" text="CON_Number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyIntelligence" alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="180.0" prefHeight="30.0" prefWidth="50.0" text="INT_Number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyWisdom" alignment="CENTER" contentDisplay="CENTER" layoutX="204.0" layoutY="180.0" prefHeight="30.0" prefWidth="50.0" text="WIS_Number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyCharisma" alignment="CENTER" contentDisplay="CENTER" layoutX="254.0" layoutY="180.0" prefHeight="30.0" prefWidth="50.0" text="CHA_Number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyStrengthModifier" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="230.0" prefHeight="30.0" prefWidth="50.0" text="STR_Mod">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyDexterityModifier" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="230.0" prefHeight="30.0" prefWidth="50.0" text="DEX_Mod">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyConstitutionModifier" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="230.0" prefHeight="30.0" prefWidth="50.0" text="CON_Mod">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyIntelligenceModifier" alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="230.0" prefHeight="30.0" prefWidth="50.0" text="INT_Mod">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyWisdomModifier" alignment="CENTER" contentDisplay="CENTER" layoutX="204.0" layoutY="230.0" prefHeight="30.0" prefWidth="50.0" text="WIS_Mod">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyCharismaModifier" alignment="CENTER" contentDisplay="CENTER" layoutX="254.0" layoutY="230.0" prefHeight="30.0" prefWidth="50.0" text="CHA_Mod">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="192.0" layoutY="40.0" prefHeight="30.0" prefWidth="84.0" text="Challenge">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="enemyChallenge" alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="70.0" prefHeight="30.0" prefWidth="50.0" text="AC_Example">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Line endX="200.0" layoutX="105.0" layoutY="175.0" startX="-100.0" />
+                        <Line endX="200.0" layoutX="105.0" layoutY="220.0" startX="-100.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

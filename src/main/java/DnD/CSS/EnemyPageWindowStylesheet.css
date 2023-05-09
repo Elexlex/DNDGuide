@@ -1,0 +1,23 @@
+.label{
+    -fx-font-family: "Bell MT";
+    -fx-font-size: 18px;
+    -fx-line-spacing: 10px;
+}
+#enemyName{
+    -fx-text-fill: #B52012;
+    -fx-font-family: "Lucida Sans Typewriter";
+    -fx-font-size: 24px;
+    -fx-underline: true;
+}
+#anchorPaneSecondary {
+    -fx-background-radius: 1em;
+    -fx-background-color: #fbf3d0;
+}
+#anchorPaneMain{
+    -fx-background-image: url('Backgrounds/oldDnDPaper.jpg');
+    -fx-background-size: cover;
+}
+#statsPane{
+    -fx-background-radius: 1em;
+    -fx-background-color: #d1d9a9;
+}

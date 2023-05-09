@@ -1,4 +1,4 @@
-package DnDGuide;
+package DnD;
 
 import java.util.Random;
 
@@ -28,12 +28,8 @@ public class EvaluateController {
        int expressionResult = values[0];
        for (int i = 0; i < operators.length; i++) {
            switch (operators[i]) {
-               case '+':
-                   expressionResult += values[i + 1];
-                   break;
-               case '-':
-                   expressionResult -= values[i + 1];
-                   break;
+               case '+' -> expressionResult += values[i + 1];
+               case '-' -> expressionResult -= values[i + 1];
            }
        }
         return expressionResult;

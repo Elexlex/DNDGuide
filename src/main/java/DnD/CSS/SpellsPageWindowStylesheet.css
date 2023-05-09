@@ -1,0 +1,19 @@
+#anchorPaneMain{
+    -fx-background-image: url('Backgrounds/oldDnDPaper.jpg');
+    -fx-background-size: cover;
+}
+#spellName{
+    -fx-text-fill: #B52012;
+}
+#line{
+    -fx-stroke: #B52012;
+    -fx-stroke-width: 2px;
+}
+#anchorPaneSecondary{
+    -fx-background-color: #fbf3d0;
+    -fx-border-style: solid none solid none;
+    -fx-border-width: 3;
+    -fx-border-color: #F2A52C;
+    -fx-background-radius: 1em;
+    -fx-border-radius: 1em;
+}

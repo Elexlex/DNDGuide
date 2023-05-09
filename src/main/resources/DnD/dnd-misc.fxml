@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DnDGuide.MiscWindowController">
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DnD.MiscWindowController">
    <children>
       <TitledPane collapsible="false" layoutX="-250.0" layoutY="250.0" prefHeight="100.0" prefWidth="600.0" rotate="270.0">
          <content>

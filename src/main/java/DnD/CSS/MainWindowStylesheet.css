@@ -1,0 +1,15 @@
+.anchor-pane{
+    -fx-background-color: green;
+    -fx-background-radius: 0 0 18 18;
+    -fx-border-radius: 0 0 18 18;
+}
+.button{
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+    -fx-border-width: 4px;
+    -fx-border-color: #FF0015;
+    -fx-background-color: #7C0015;
+}
+.button:hover{
+    -fx-background-color: #F2A52C;
+}
