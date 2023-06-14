@@ -1,0 +1,33 @@
+.text-field{
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+
+}
+.text-field:disabled{
+    -fx-opacity: 1.0;
+}
+.button{
+    -fx-background-color: #e4d8c8;
+    -fx-border-radius: 1px;
+    -fx-border-color: black;
+}
+.button:hover{
+    -fx-background-color: #5f8d26;
+}
+.button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+.button:disabled{
+    -fx-opacity: 1.0;
+}
+
+#anchorPane, .text-field{
+    -fx-border-width: 2px;
+    -fx-border-radius: 2em;
+    -fx-border-color: white;
+}
+.root{
+    -fx-background-color: #2a2928;
+}

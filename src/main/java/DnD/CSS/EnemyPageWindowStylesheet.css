@@ -10,8 +10,12 @@
     -fx-underline: true;
 }
 #anchorPaneSecondary {
+    -fx-background-image: url('Backgrounds/backgroundPaper.jpg');
+    -fx-background-size: cover;
     -fx-background-radius: 1em;
-    -fx-background-color: #fbf3d0;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 1em;
 }
 #anchorPaneMain{
     -fx-background-image: url('Backgrounds/oldDnDPaper.jpg');
@@ -20,4 +24,7 @@
 #statsPane{
     -fx-background-radius: 1em;
     -fx-background-color: #d1d9a9;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 1em;
 }

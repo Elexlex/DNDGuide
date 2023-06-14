@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DnD.EnemiesWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DnD.EnemiesWindowController">
    <children>
-      <TableView fx:id="tableView" fixedCellSize="30.0" layoutX="144.0" layoutY="89.0" onMouseClicked="#doubleMouseClicked" pickOnBounds="false" prefHeight="600.0" prefWidth="750.0">
+      <TableView fx:id="tableView" fixedCellSize="30.0" layoutX="185.0" layoutY="90.0" onMouseClicked="#doubleMouseClicked" pickOnBounds="false" prefHeight="575.0" prefWidth="740.0">
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
@@ -24,25 +24,24 @@
             <TableColumn fx:id="tableEnemyChallenge" maxWidth="75.0" prefWidth="75.0" text="Column X" />
          </columns>
       </TableView>
-      <Pane fx:id="pane" layoutY="-14.0" prefHeight="705.0" prefWidth="130.0">
+      <Pane fx:id="pane" layoutX="14.0" layoutY="15.0" prefHeight="650.0" prefWidth="150.0">
          <children>
-            <Button id="1" fx:id="buttonArrow" layoutX="20.0" layoutY="101.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" />
-            <Button layoutX="20.0" layoutY="226.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" />
-            <Button layoutX="20.0" layoutY="351.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" />
-            <Button layoutX="20.0" layoutY="476.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" />
-            <Button layoutX="20.0" layoutY="601.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" />
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="14.0" prefHeight="63.0" prefWidth="115.0" text="Creatures" textFill="WHITE">
+            <Button id="0" fx:id="arrowButton" layoutX="18.0" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#MouseClicked" prefHeight="90.0" prefWidth="115.0" text="Main" />
+            <Button id="2" layoutX="18.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#MouseClicked" prefHeight="90.0" prefWidth="115.0" text="Spells" />
+            <Button id="3" layoutX="18.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#MouseClicked" prefHeight="90.0" prefWidth="115.0" text="Characters" />
+            <Button id="4" layoutX="18.0" layoutY="485.0" mnemonicParsing="false" onMouseClicked="#MouseClicked" prefHeight="90.0" prefWidth="115.0" text="Calculator" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="63.0" prefWidth="115.0" text="Creatures" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <TextField fx:id="searchName" layoutX="144.0" layoutY="27.0" prefHeight="36.0" prefWidth="202.0" promptText="Enemy Name">
+      <TextField fx:id="searchName" layoutX="184.0" layoutY="30.0" prefHeight="36.0" prefWidth="202.0" promptText="Enemy Name">
          <font>
             <Font size="16.0" />
          </font></TextField>
-      <ComboBox fx:id="typeBox" layoutX="374.0" layoutY="27.0" prefHeight="36.0" prefWidth="163.0" promptText="Enemy Type" />
-      <ComboBox fx:id="sizeBox" layoutX="564.0" layoutY="27.0" prefHeight="36.0" prefWidth="163.0" promptText="Enemy Size" />
+      <ComboBox fx:id="typeBox" layoutX="414.0" layoutY="30.0" prefHeight="36.0" prefWidth="163.0" promptText="Enemy Type" />
+      <ComboBox fx:id="sizeBox" layoutX="604.0" layoutY="30.0" prefHeight="36.0" prefWidth="163.0" promptText="Enemy Size" />
    </children>
 </AnchorPane>

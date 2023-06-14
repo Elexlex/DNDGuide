@@ -9,16 +9,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -31,13 +30,16 @@ public class SpellWindowController implements Initializable {
     @FXML private TextField searchName;
     @FXML private ComboBox<String> levelBox;
     @FXML private ComboBox<String> schoolBox;
+    @FXML private Pane pane;
 
     public void initialize(URL url, ResourceBundle rb) {
+        spellTableView.setPlaceholder(new Label("No creatures are here :("));
+
         ObservableList<Spell> spellList = FXCollections.observableArrayList();
 
-        ObservableList<String> levelList = FXCollections.observableArrayList("0 Level", "1 Level", "2 Level", "3 Level",
+        ObservableList<String> levelList = FXCollections.observableArrayList("", "0 Level", "1 Level", "2 Level", "3 Level",
                 "4 Level", "5 Level", "6 Level", "7 Level", "8 Level", "9 Level");
-        ObservableList<String> schoolList = FXCollections.observableArrayList("Abjuration", "Transmutation", "Conjuration", "Divination",
+        ObservableList<String> schoolList = FXCollections.observableArrayList("", "Abjuration", "Transmutation", "Conjuration", "Divination",
                 "Enchantment", "Evocation", "Illusion", "Necromancy");
 
         levelBox.setItems(levelList);
@@ -168,5 +170,14 @@ public class SpellWindowController implements Initializable {
             }
             return Spell.getSpellSchool().equals(school);
         };
+    }
+
+    public void MouseClicked(MouseEvent mouseEvent) throws IOException {
+        SwitchToScenes sts = new SwitchToScenes();
+        Button button = (Button) mouseEvent.getSource();
+        String buttonId = button.getId();
+        int id = Integer.parseInt(buttonId);
+        sts.switchToNewScene(mouseEvent, id);
+
     }
 }

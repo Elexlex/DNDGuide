@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -36,10 +37,10 @@ public class EnemiesWindowController implements Initializable {
     @FXML private ComboBox<String> typeBox;
     @FXML private ComboBox<String> sizeBox;
     @FXML private Pane pane;
-    @FXML private Button buttonArrow;
+    @FXML private Button arrowButton;
 
     public void initialize(URL url, ResourceBundle rb) {
-        //tableView.getStyleClass().add("noHeader");
+        tableView.setPlaceholder(new Label("No creatures are here :("));
 
         ObservableList<Enemy> enemiesList = FXCollections.observableArrayList();
 
@@ -175,6 +176,15 @@ public class EnemiesWindowController implements Initializable {
             }
             return Enemy.getEnemySize().equals(size);
         };
+    }
+
+    public void MouseClicked(MouseEvent mouseEvent) throws IOException {
+        SwitchToScenes sts = new SwitchToScenes();
+        Button button = (Button) mouseEvent.getSource();
+        String buttonId = button.getId();
+        int id = Integer.parseInt(buttonId);
+        sts.switchToNewScene(mouseEvent, id);
+
     }
 }
 

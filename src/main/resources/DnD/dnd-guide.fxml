@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DnD.MainWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DnD.MainWindowController">
    <children>
-      <ImageView fitHeight="700.0" fitWidth="900.0" pickOnBounds="true">
-         <image>
-            <Image url="@CSS/Backgrounds/backgroundPaper.jpg" />
-         </image>
-      </ImageView>
-      <Pane prefHeight="700.0" prefWidth="130.0">
+      <Pane fx:id="pane" layoutX="14.0" layoutY="15.0" prefHeight="650.0" prefWidth="150.0">
          <children>
-            <Button id="1" layoutX="13.0" layoutY="52.0" mnemonicParsing="false" onMouseClicked="#MouseClicked" prefHeight="90.0" prefWidth="90.0" />
-            <Button id="2" layoutX="13.0" layoutY="177.0" mnemonicParsing="false" onMouseClicked="#MouseClicked" prefHeight="90.0" prefWidth="90.0" />
-            <Button layoutX="13.0" layoutY="302.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" />
-            <Button layoutX="13.0" layoutY="427.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" />
-            <Button layoutX="13.0" layoutY="552.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" />
+            <Button id="1" layoutX="18.0" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#MouseClicked" prefHeight="90.0" prefWidth="115.0" text="Creatures" />
+            <Button id="2" layoutX="18.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#MouseClicked" prefHeight="90.0" prefWidth="115.0" text="Spells" />
+            <Button id="3" layoutX="18.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#MouseClicked" prefHeight="90.0" prefWidth="115.0" text="Characters" />
+            <Button id="4" layoutX="18.0" layoutY="485.0" mnemonicParsing="false" onMouseClicked="#MouseClicked" prefHeight="90.0" prefWidth="115.0" text="Calculator" />
+            <Label alignment="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="63.0" prefWidth="115.0" text="Main" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
+      <ImageView fitHeight="188.0" fitWidth="270.0" layoutX="690.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/cloud message.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelQuote" alignment="CENTER" layoutX="719.0" layoutY="42.0" prefHeight="80.0" prefWidth="200.0" text="Label" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Bell MT" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="261.0" fitWidth="282.0" layoutX="696.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sword and shield.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

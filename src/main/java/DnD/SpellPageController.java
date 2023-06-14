@@ -36,7 +36,7 @@ public class SpellPageController implements Initializable {
                 ResultSet resultSet = statement.executeQuery(query);
                 resultSet.next();
                 spellName.setText(resultSet.getString("spell_name"));
-                spellLevelAndSchool.setText(resultSet.getString("spell_level") + " Level\n" + resultSet.getString("spell_school"));
+                spellLevelAndSchool.setText(resultSet.getString("spell_level") + " Level, " + resultSet.getString("spell_school"));
                 spellCasting.setText("Casting time: " + resultSet.getString("spell_casting_time"));
                 if (resultSet.getString("spell_ritual").equals("Y")){
                     spellCasting.setText(spellCasting.getText() + " (ritual)");
