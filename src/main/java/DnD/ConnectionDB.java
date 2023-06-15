@@ -1,15 +1,21 @@
 package DnD;
 
+import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.Properties;
 
 public class ConnectionDB {
     public Connection getConnectionDB(){
-        final String databaseURL = "jdbc:mysql://localhost:3306/dnd";
-        final String databaseUser = "Elexlex";
-        final String databasePassword = "Phoenix$$2004";
+        Properties properties = new Properties();
         Connection connection = null;
-        try {
+        try(FileInputStream fileInputStream = new FileInputStream("resources/security/config.properties")) {
+            properties.load(fileInputStream);
+
+            final String databaseURL = properties.getProperty("db.url");
+            final String databaseUser = properties.getProperty("db.username");
+            final String databasePassword = properties.getProperty("db.password");
+
             connection = DriverManager.getConnection(databaseURL, databaseUser, databasePassword);
         }
         catch (Exception e){
