@@ -138,12 +138,12 @@ public class EnemiesWindowController implements Initializable {
     public void doubleMouseClicked (MouseEvent mouseEvent) {
         if (mouseEvent.getButton().equals(MouseButton.PRIMARY) && mouseEvent.getClickCount() == 2) {
             try {
-                String pathname = new File("java/DnD/CSS/EnemyPageWindowStylesheet.css").getAbsolutePath();
+                String pathname = new File("java/DnD/CSS/EnemyPageWindowStylesheet.CSS").getAbsolutePath();
                 File file = new File(pathname);
                 Stage stage = new Stage();
                 Scene scene;
                 Parent root;
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("dnd-enemy-page.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("DnD-enemy-page.fxml"));
                 root = loader.load();
                 EnemyPageController controller = loader.getController();
                 controller.setEnemyID(tableView.getSelectionModel().getSelectedItem().getEnemyID());

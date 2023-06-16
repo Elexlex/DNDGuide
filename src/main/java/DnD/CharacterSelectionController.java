@@ -119,12 +119,12 @@ public class CharacterSelectionController implements Initializable {
 
     private void newPage(boolean newPageCheck){
         try {
-            String pathname = new File("java/DnD/CSS/CharacterPageStylesheet.css").getAbsolutePath();
+            String pathname = new File("java/DnD/CSS/CharacterPageStylesheet.CSS").getAbsolutePath();
             File file = new File(pathname);
             Stage stage = new Stage();
             Scene scene;
             Parent root;
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("dnd-character-page.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("DnD-character-page.fxml"));
             root = loader.load();
             CharacterPageController controller = loader.getController();
             controller.setNewPageCheck(newPageCheck);

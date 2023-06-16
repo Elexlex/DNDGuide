@@ -7,9 +7,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 public class DNDCalculatorController{
-    @FXML private TextField expression;
-    @FXML private TextField result;
-    @FXML private AnchorPane anchorPane;
+    @FXML
+    public TextField expression;
+    @FXML
+    public TextField result;
+    @FXML
+    public AnchorPane anchorPane;
 
 
     public void onMouseClicked(MouseEvent mouseEvent){

@@ -49,7 +49,7 @@ public class SpellWindowController implements Initializable {
         sortingTable(spellList);
     }
 
-    private void gettingInfo(ObservableList<Spell> spellList){
+    public void gettingInfo(ObservableList<Spell> spellList){
         try {
             ConnectionDB connectionDB = new ConnectionDB();
             String query = "SELECT spell_id, spell_name, spell_level, spell_school, spell_casting_time FROM spells";
@@ -70,7 +70,7 @@ public class SpellWindowController implements Initializable {
         settingUpTable(spellList);
     }
 
-    private void settingUpTable(ObservableList<Spell> spellList){
+    public void settingUpTable(ObservableList<Spell> spellList){
         spellTableView.getColumns().clear();
 
         TableColumn<Spell, String> tableSpellName = new TableColumn<>("Name");
@@ -132,12 +132,12 @@ public class SpellWindowController implements Initializable {
     public void doubleMouseClicked(MouseEvent mouseEvent) {
         if (mouseEvent.getButton().equals(MouseButton.PRIMARY) && mouseEvent.getClickCount() == 2) {
             try {
-                String pathname = new File("java/DnD/CSS/SpellsPageWindowStylesheet.css").getAbsolutePath();
+                String pathname = new File("java/DnD/CSS/SpellsPageWindowStylesheet.CSS").getAbsolutePath();
                 File file = new File(pathname);
                 Stage stage = new Stage();
                 Scene scene;
                 Parent root;
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("dnd-spell-page.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("DnD-spell-page.fxml"));
                 root = loader.load();
                 SpellPageController controller = loader.getController();
                 controller.setSpellID(spellTableView.getSelectionModel().getSelectedItem().getSpellID());
